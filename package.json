@@ -1,0 +1,38 @@
+{
+  "name": "headless-wp-onboard",
+  "version": "0.1.0",
+  "description": "Onboards a new client with a Netlify static site + Hostinger WordPress headless blog at /blog. Handles WP config, plugin install, content migration, DNS (Cloudflare/Netlify), and file generation. Agent-agnostic.",
+  "type": "module",
+  "bin": {
+    "headless-wp-onboard": "./bin/cli.js"
+  },
+  "scripts": {
+    "start": "node bin/cli.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "starter-template/",
+    "PLAYBOOK.md",
+    "README.md"
+  ],
+  "keywords": [
+    "wordpress",
+    "headless",
+    "netlify",
+    "hostinger",
+    "cloudflare",
+    "blog",
+    "onboarding",
+    "cli"
+  ],
+  "author": "Ecolive Ventures",
+  "license": "MIT",
+  "dependencies": {
+    "@inquirer/prompts": "^5.3.8",
+    "commander": "^12.1.0"
+  }
+}

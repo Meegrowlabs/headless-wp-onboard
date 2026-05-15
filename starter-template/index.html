@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{BRAND}}</title>
+<meta name="description" content="{{TAGLINE}}">
+<link rel="canonical" href="https://{{DOMAIN}}/">
+<style>
+  :root {
+    --primary: #00261b;
+    --secondary: #006e09;
+    --surface: #f7faf8;
+    --on-surface: #181c1b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: system-ui, sans-serif; background: var(--surface); color: var(--on-surface); }
+  nav { background: rgba(255,255,255,0.9); backdrop-filter: blur(12px); position: sticky; top: 0; box-shadow: 0 1px 3px rgba(0,0,0,0.05); z-index: 10; }
+  nav .inner { max-width: 1200px; margin: 0 auto; padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+  nav a { color: var(--primary); text-decoration: none; margin-left: 2rem; font-weight: 600; font-size: 0.9rem; }
+  nav a.brand { font-size: 1.25rem; margin-left: 0; }
+  .hero { max-width: 1200px; margin: 0 auto; padding: 6rem 2rem; text-align: center; }
+  .hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 1.5rem; }
+  .hero p { font-size: 1.25rem; color: #555; max-width: 600px; margin: 0 auto 2.5rem; line-height: 1.6; }
+  .cta { display: inline-block; padding: 1rem 2.5rem; background: var(--primary); color: white; border-radius: 999px; text-decoration: none; font-weight: 700; }
+  footer { max-width: 1200px; margin: 4rem auto 2rem; padding: 2rem; border-top: 1px solid #e0e3e1; color: #555; font-size: 0.85rem; text-align: center; }
+</style>
+</head>
+<body>
+<nav>
+  <div class="inner">
+    <a class="brand" href="/">{{BRAND}}</a>
+    <div>
+      <a href="/">Home</a>
+      <a href="/blog">Insights</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+<section class="hero">
+  <h1>{{BRAND}}</h1>
+  <p>{{TAGLINE}}</p>
+  <a class="cta" href="/blog">Read our insights →</a>
+</section>
+<footer>© <span id="y"></span> {{BRAND}}. All rights reserved.</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
